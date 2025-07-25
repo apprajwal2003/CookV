@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section
@@ -15,12 +17,11 @@ export default function Hero() {
           Navigate recipes, control your kitchen, and cook amazing meals—all
           without lifting a finger. Welcome to the future of cooking.
         </p>
-        <a
-          href="#how-it-works"
-          className="bg-white text-amber-600 hover:text-white hover:bg-amber-600 font-bold py-4 px-8 rounded-full text-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg inline-block"
-        >
-          Start Cooking!
-        </a>
+        <Link to="/recipe">
+          <div className="bg-white text-amber-600 hover:text-white hover:bg-amber-600 font-bold py-4 px-8 rounded-full text-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg inline-block">
+            Start Cooking!
+          </div>
+        </Link>
       </div>
     </section>
   );
