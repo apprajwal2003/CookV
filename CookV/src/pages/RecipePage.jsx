@@ -1,18 +1,30 @@
 // src/components/RecipePage.jsx
 
+import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import recipes from "../data.js"; // Import recipes from the separate data file
+import axios from "axios";
 
 export default function RecipePage() {
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
+  const [recipes, setRecipes] = useState([]);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearch(query);
   };
+
+  useEffect(() => {
+    // Fetch recipes from the backend or use a static list
+    const allRecipes = async () => {
+      // Simulating a fetch call
+      const response = await axios.get("/api/allRecipes");
+      setRecipes(response.data);
+    };
+    allRecipes();
+  }, []);
 
   const filteredRecipes = recipes.filter((r) =>
     r.name.toLowerCase().includes(search.toLowerCase())
