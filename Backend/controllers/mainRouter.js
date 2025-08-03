@@ -25,6 +25,21 @@ mainRouter.get("/allRecipes", (req, res) => {
   ]);
 });
 
+mainRouter.get("/recipe/:id", (req, res) => {
+  const recipeId = req.params.id;
+  // Simulating fetching recipe details by ID
+  const recipeDetails = {
+    id: recipeId,
+    name: "Sample Recipe",
+    steps: [
+      "Step 1: Prepare ingredients",
+      "Step 2: Cook the main dish",
+      "Step 3: Serve and enjoy",
+    ],
+  };
+  res.json(recipeDetails);
+});
+
 mainRouter.use("/", (req, res) => {
   res.json("Welcome to the CookV Backend!");
 });
