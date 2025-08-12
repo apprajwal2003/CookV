@@ -35,7 +35,6 @@ export default function StepByStep() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-      {/* Title */}
       <h1 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
         {recipeName}
       </h1>
@@ -43,7 +42,7 @@ export default function StepByStep() {
       {/* Voice Assistant Bar */}
       <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 p-4 rounded-2xl shadow-lg mb-8">
         <p className="text-white text-lg font-medium">
-          Voice Assistant Controls
+          {/*text to voice*/} //to be implemented
         </p>
         <div className="flex gap-3">
           <button className="p-3 bg-white rounded-full shadow-md hover:bg-gray-100 transition">
@@ -58,7 +57,6 @@ export default function StepByStep() {
         </div>
       </div>
 
-      {/* Steps */}
       <div className="bg-white rounded-2xl shadow-lg p-6 space-y-6">
         {recipeSteps.map((step, index) => (
           <div
