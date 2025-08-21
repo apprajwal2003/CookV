@@ -42,7 +42,7 @@ export default function StepByStep() {
       {/* Voice Assistant Bar */}
       <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 p-4 rounded-2xl shadow-lg mb-8">
         <p className="text-white text-lg font-medium">
-          {/*text to voice*/} //to be implemented
+          //to be implemented text to voice
         </p>
         <div className="flex gap-3">
           <button className="p-3 bg-white rounded-full shadow-md hover:bg-gray-100 transition">
